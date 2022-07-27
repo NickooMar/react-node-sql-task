@@ -5,9 +5,9 @@ import dotenv from 'dotenv'; //Importante al utilizar dotenv ejecutarlo en el ar
 dotenv.config()
 
 export const pool = createPool({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
+    host: process.env.DATABASE_HOST,
+    port: process.env.DATABASE_PORT,
+    user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
 })
